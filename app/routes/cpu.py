@@ -12,4 +12,7 @@ def get_cpu():
     if data.get("error"):
         return data
 
-    return data.get("cpu", [])
+    return {
+        "cpu": data.get("cpu", []),
+        "cpu_history": data.get("cpu_history", [])
+    }
