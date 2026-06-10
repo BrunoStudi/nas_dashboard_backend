@@ -42,6 +42,7 @@ def get_system_info():
 
     return {
         "cpu_model": cpu.get("model", "N/A"),
+        "cpu_current_ghz": cpu.get("cpu_current_ghz", "N/A"),
         "ram_total": data.get("memory", {}).get("total", "N/A"),
         "ram_used": memory.get("used", "N/A"),
         "ram_available": memory.get("available", "N/A"),
