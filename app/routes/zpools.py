@@ -12,4 +12,8 @@ def get_zpools():
     if data.get("error"):
         return data
 
-    return data.get("zpools", [])
+    return {
+        "zpools": data.get("zpools", []),
+        "zpool_details": data.get("zpool_details", {}),
+        "zpool_status": data.get("zpool_status", "N/A")
+    }
