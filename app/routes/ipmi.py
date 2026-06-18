@@ -34,9 +34,14 @@ def get_ipmi_status():
             mode = content.upper()
 
     fans = [
+        {"name": "FAN1", "rpm": "N/A", "status": "N/A"},
+        {"name": "FAN2", "rpm": "N/A", "status": "N/A"},
         {"name": "FAN3", "rpm": "N/A", "status": "N/A"},
         {"name": "FAN4", "rpm": "N/A", "status": "N/A"},
+        {"name": "FAN5", "rpm": "N/A", "status": "N/A"},
+        {"name": "FAN6", "rpm": "N/A", "status": "N/A"},
         {"name": "FANA", "rpm": "N/A", "status": "N/A"},
+        {"name": "FANB", "rpm": "N/A", "status": "N/A"}
     ]
 
     if STATUS_FILE.exists():
